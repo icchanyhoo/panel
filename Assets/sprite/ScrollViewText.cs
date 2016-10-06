@@ -12,25 +12,25 @@ public class ScrollViewText : MonoBehaviour {
 			// Flag 0 が立った
 			GetComponent<Text>().text = "あなたのターン";
 			GetComponent<Animator> ().SetTrigger ("scrollText_anime");
-			panelScript.turn = 0;
+			main.turn = 0;
 			Invoke ("seec_frist",2.8f);
 		}
 		
 		if (FlagManager.Instance.flags [1] == true) {
 			// Flag 1 が立った
-			PanelScriptBox.GetComponent<panelScript>().enabled = false;
+			PanelScriptBox.GetComponent<main>().enabled = false;
 			GetComponent<Text>().text = "エネミーターン";
 			GetComponent<Animator> ().SetTrigger ("scrollText_anime");
-			panelScript.turn = 1;
+			main.turn = 1;
 			Invoke("seec_myturn",3.0f);
 		}
 		
 		if (FlagManager.Instance.flags [2] == true) {
 			// Flag 2 が立った
-			PanelScriptBox.GetComponent<panelScript>().enabled = false;
+			PanelScriptBox.GetComponent<main>().enabled = false;
 			GetComponent<Text>().text = "あなたのターン";
 			GetComponent<Animator> ().SetTrigger ("scrollText_anime");
-			panelScript.turn = 0;
+			main.turn = 0;
 			Invoke("seec_eneturn",2.0f);
 		}
 		
@@ -43,7 +43,7 @@ public class ScrollViewText : MonoBehaviour {
 	}
 	
 	void seec_myturn(){
-		PanelScriptBox.GetComponent<panelScript>().enabled = true;
+		PanelScriptBox.GetComponent<main>().enabled = true;
 
 		Debug.Log ("ene_enabled : true");
 
@@ -53,7 +53,7 @@ public class ScrollViewText : MonoBehaviour {
 	}
 	
 	void seec_eneturn(){
-		PanelScriptBox.GetComponent<panelScript>().enabled = true;
+		PanelScriptBox.GetComponent<main>().enabled = true;
 
 		Debug.Log ("my_enabled : true");
 

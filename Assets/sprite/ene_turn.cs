@@ -10,9 +10,9 @@ public class ene_turn : MonoBehaviour {
 
 	//ターン数
 	public void ene(){
-		panelScript.turn = 1;
+		main.turn = 1;
 //		panelScript.turn_seec = 2;
-		damege = panelScript.damegePoint;
+		damege = main.damegePoint;
 //		Debug.Log ("ene_turn");
 //		ene_MainCamera.SendMessage ("Update");
 		srider_in_outBox.SendMessage ("srider");
