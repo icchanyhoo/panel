@@ -11,7 +11,7 @@ public class lifePoint : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		my_life = (charaBox1.defense + charaBox2.defense + charaBox3.defense + charaBox4.defense);
+		my_life = (defense_add_count.add_count);
 		ene_life = eneBox.ene_defense;
 
 		Debug.Log ("my_life" + my_life);

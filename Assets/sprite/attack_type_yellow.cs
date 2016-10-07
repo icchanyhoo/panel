@@ -7,18 +7,6 @@ public class attack_type_yellow : MonoBehaviour {
 	
 	void Start(){
 		//my_damegePoint = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(charaBox1.type == 4){
-			my_damegePoint = charaBox1.attack;
-		}else if(charaBox2.type == 4){
-			my_damegePoint = charaBox2.attack;
-		}else if(charaBox3.type == 4){
-			my_damegePoint = charaBox3.attack;
-		}else if(charaBox4.type == 4){
-			my_damegePoint = charaBox4.attack;
-		}
+		Debug.Log ("add_af_yellow : " + my_damegePoint);
 	}
 }

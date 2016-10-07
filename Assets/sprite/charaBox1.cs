@@ -8,8 +8,8 @@ public class charaBox1 : MonoBehaviour {
 	public static float type;
 	// Use this for initialization
 	void Start () {
-		attack = 20;
-		defense = 50;
-		type = 1; //火属性
+//		attack = 20;
+//		defense = 50;
+//		type = 1; //火属性
 	}
 }

@@ -145,13 +145,9 @@ public class main : MonoBehaviour{
 			// パネル属性判別エネミーに与えるダメージ
 			if(currentName == "Panel0"){
 				// 火属性ダメージをエネミーに与える
-
 				Debug.Log("red_type");
 
-				if(charaBox1.type == 1 || charaBox2.type == 1 || charaBox3.type == 1 || charaBox4.type == 1){
-					lifePoint.ene_life -= attack_type_red.my_damegePoint;
-				}
-
+				lifePoint.ene_life -= attack_type_red.my_damegePoint;
 				Debug.Log("my_damePoint" + attack_type_red.my_damegePoint);
 
 			}else if(currentName == "Panel1"){
@@ -159,10 +155,7 @@ public class main : MonoBehaviour{
 
 				Debug.Log("bull_type");
 
-				if(charaBox1.type == 2 || charaBox2.type == 2 || charaBox3.type == 2 || charaBox4.type == 2){
-					lifePoint.ene_life -= attack_type_bull.my_damegePoint;
-				}
-
+				lifePoint.ene_life -= attack_type_bull.my_damegePoint;
 				Debug.Log("my_damePoint" + attack_type_bull.my_damegePoint);
 
 			}else if(currentName == "Panel2"){
@@ -170,10 +163,7 @@ public class main : MonoBehaviour{
 
 				Debug.Log("green_type");
 
-				if(charaBox1.type == 3 || charaBox2.type == 3 || charaBox3.type == 3 || charaBox4.type == 3){
-					lifePoint.ene_life -= attack_type_green.my_damegePoint;
-				}
-
+				lifePoint.ene_life -= attack_type_green.my_damegePoint;
 				Debug.Log("my_damePoint" + attack_type_green.my_damegePoint);
 
 			}else if(currentName == "Panel3"){
@@ -181,10 +171,7 @@ public class main : MonoBehaviour{
 
 				Debug.Log("yellow_type");
 
-				if(charaBox1.type == 4 || charaBox2.type == 4 || charaBox3.type == 4 || charaBox4.type == 4){
-					lifePoint.ene_life -= attack_type_yellow.my_damegePoint;
-				}
-
+				lifePoint.ene_life -= attack_type_yellow.my_damegePoint;
 				Debug.Log("my_damePoint" + attack_type_yellow.my_damegePoint);
 
 			}
