@@ -20,7 +20,7 @@ public class fade_anime : MonoBehaviour {
 					GetComponent<Animator> ().SetTrigger ("fade_tutorial");
 					if (Input.GetMouseButtonDown (0)) {
 						Debug.Log ("ok");
-						Application.LoadLevel ("game");
+						Application.LoadLevel ("select_chara");
 					}
 				}
 			}

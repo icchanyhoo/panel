@@ -44,6 +44,9 @@ public class main : MonoBehaviour{
 
 		Debug.Log ("flag[0]");
 
+		//ターンリセットフラグ
+		turn = 0;
+
 		srider_in_outBox.SendMessage ("Scroll");
 	}
 
@@ -121,7 +124,8 @@ public class main : MonoBehaviour{
 			GameObject hitObj = hit.collider.gameObject;
 			if (hitObj.name == currentName && lastPanel != hitObj) {
 				float distance = Vector2.Distance (hitObj.transform.position, lastPanel.transform.position);
-				if (distance < 1.5f) {
+				//パネル間の距離
+				if (distance < 0.85f) {
 					lastPanel = hitObj;
 					PushToList (hitObj);
 				}
@@ -143,12 +147,12 @@ public class main : MonoBehaviour{
 			Debug.Log("OnDragEnd");
 
 			// パネル属性判別エネミーに与えるダメージ
-			if(currentName == "Panel0"){
+			if(currentName == "Panel2"){
 				// 火属性ダメージをエネミーに与える
 				Debug.Log("red_type");
 
 				lifePoint.ene_life -= attack_type_red.my_damegePoint;
-				Debug.Log("my_damePoint" + attack_type_red.my_damegePoint);
+				Debug.Log("my_damePoint : " + attack_type_red.my_damegePoint);
 
 			}else if(currentName == "Panel1"){
 				// 水属性ダメージをエネミーに与える
@@ -156,23 +160,23 @@ public class main : MonoBehaviour{
 				Debug.Log("bull_type");
 
 				lifePoint.ene_life -= attack_type_bull.my_damegePoint;
-				Debug.Log("my_damePoint" + attack_type_bull.my_damegePoint);
+				Debug.Log("my_damePoint : " + attack_type_bull.my_damegePoint);
 
-			}else if(currentName == "Panel2"){
+			}else if(currentName == "Panel3"){
 				// 風属性ダメージをエネミーに与える
 
 				Debug.Log("green_type");
 
 				lifePoint.ene_life -= attack_type_green.my_damegePoint;
-				Debug.Log("my_damePoint" + attack_type_green.my_damegePoint);
+				Debug.Log("my_damePoint : " + attack_type_green.my_damegePoint);
 
-			}else if(currentName == "Panel3"){
+			}else if(currentName == "Panel0"){
 				// 光属性ダメージをエネミーに与える
 
 				Debug.Log("yellow_type");
 
 				lifePoint.ene_life -= attack_type_yellow.my_damegePoint;
-				Debug.Log("my_damePoint" + attack_type_yellow.my_damegePoint);
+				Debug.Log("my_damePoint : " + attack_type_yellow.my_damegePoint);
 
 			}
 

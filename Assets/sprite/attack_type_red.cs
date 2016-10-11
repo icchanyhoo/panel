@@ -5,8 +5,15 @@ public class attack_type_red : MonoBehaviour {
 	
 	public static float my_damegePoint;
 
+	//各ステータス格納
+	public static float add_chara1;
+	public static float add_chara5;
+	public static float add_chara9;
+	public static float add_chara13;
+
 	void Start(){
-		//my_damegePoint = 0;
+		//合算値
+		my_damegePoint = add_chara1 + add_chara5 + add_chara9 + add_chara13;
 		Debug.Log ("add_af_red : " + my_damegePoint);
 	}
 	

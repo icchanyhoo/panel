@@ -32,6 +32,13 @@ public class lifePoint : MonoBehaviour {
 
 			Debug.Log("gameOver");
 
+			//キャラクター選択解除・フラグリセット
+		    chara_count.count = 0;
+			Debug.Log("chara_count : " + chara_count.count);
+
+			//ターンリセットフラグ
+			main.turn = 0;
+
 			Application.LoadLevel(0);
 
 		}
@@ -39,6 +46,12 @@ public class lifePoint : MonoBehaviour {
 		if(ene_life < 0){
 			
 			Debug.Log("win");
+
+			//キャラクター選択解除・フラグリセット
+			chara_count.count = 0;
+
+			//ターンリセットフラグ
+			main.turn = 0;
 
 			Application.LoadLevel(0);
 			
