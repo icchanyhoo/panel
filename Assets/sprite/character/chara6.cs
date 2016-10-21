@@ -21,6 +21,13 @@ public class chara6 : MonoBehaviour {
 	void Start () {
 		//キャラクター選択フラグリセット
 		change_flag = 0;
+
+		//攻撃力＆HPステータスをリセット
+		attack_type_bull.add_chara6 = 0;
+		defense_add_count.add_chara6 = 0;
+		attack_status_text.select_chara_num = 0;
+		life_status_text.select_chara_num = 0;
+		name_text.select_chara_num = 0;
 	}
 	
 	void Update () {
@@ -42,6 +49,12 @@ public class chara6 : MonoBehaviour {
 						//選択中のキャラクターナンバー（0の場合は無選択）
 						chara_num = 6;
 						Debug.Log("chara_num : " + chara_num);
+						attack_status_text.select_chara_num = chara_num;
+						life_status_text.select_chara_num = chara_num;
+						name_text.select_chara_num = chara_num;
+
+						//プレイ画面にキャラクターをセット（仮実装）
+						//chara_select_list.numList.Add(chara_num);
 						
 						//選択上限カウント
 						chara_count.count++;
@@ -65,6 +78,9 @@ public class chara6 : MonoBehaviour {
 						//選択中のキャラクターナンバー（0の場合は無選択）
 						chara_num = 0;
 						Debug.Log("chara_num : " + chara_num);
+						attack_status_text.select_chara_num = 0;
+						life_status_text.select_chara_num = 0;
+						name_text.select_chara_num = 0;
 						
 						//選択上限カウント
 						chara_count.count--;
