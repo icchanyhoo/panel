@@ -29,7 +29,7 @@ public class CameraUtility:MonoBehaviour {
 		// UI RootのAutomaticはOFF, Manual Heightは想定heightを設定する
 		
 		// アスペクト比を設定のみなので、設定後は削除
-		this.Destroy(this);
+//		this.Destroy(this);
 	}
 	
 	// アスペクト比 固定するようにcameraのrect取得

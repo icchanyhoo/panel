@@ -7,6 +7,8 @@ public class charaBox1 : MonoBehaviour {
 	public static List<int> numList = new List<int>();
 //	public Texture[] select_list;
 	public static int texture;
+	public static float type;
+
 	void Start () {
 		int b = numList[0];
 		for(int i = 0;i < 17;i++){
